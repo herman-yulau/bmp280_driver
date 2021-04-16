@@ -65,7 +65,7 @@ static int __init bmp280_init(void) {
     }
     devclass = class_create( THIS_MODULE, "dyn_class" ); /* struct class* */
     for( i = 0; i < DEVICE_COUNT; i++ ) {
-#define DEVNAME "dyn"
+#define DEVNAME "bmp280"
         dev = MKDEV( major, DEVICE_FIRST + i );
         device_create(devclass, NULL, dev, NULL, "%s_%d", DEVNAME, i );
     }
